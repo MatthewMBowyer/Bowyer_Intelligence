@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demonstrations — Bowyer Intelligence</title>
+  <meta name="description" content="Six live in-browser demonstrations: a manual-to-automated compliance-support pipeline, a raw statement transforming into structured intelligence, a two-way reconciliation board, an AI triage desk, a data-quality profiler and a document-pack completeness checker. Fictional data, real mechanics.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#050505">
+  <link rel="canonical" href="demonstrations.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Demonstrations — Bowyer Intelligence">
+  <meta property="og:description" content="Capability you can operate, not a slideshow. Six live client-side demonstrations with synthetic data.">
+  <meta property="og:image" content="assets/img/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bowyer Intelligence — Creating the Operational Edge">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/img/favicon-192.png">
+  <link rel="preload" href="assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Bowyer Intelligence home">
+        <img src="assets/img/logo-mark.png" alt="" width="44" height="37" aria-hidden="true">
+        <span>Bowyer&nbsp;Intelligence<span class="b-sub">Creating the Operational Edge</span></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-open="false">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="capabilities.html">Capabilities</a></li>
+          <li><a href="demonstrations.html" aria-current="page">Demonstrations</a></li>
+          <li><a href="credibility.html">Credibility</a></li>
+          <li><a class="nav-cta" href="contact.html">Start a conversation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="hero-bg" aria-hidden="true">
+        <svg width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1400 400">
+          <defs><radialGradient id="dg" cx="85%" cy="0%" r="55%">
+            <stop offset="0%" stop-color="#f0500a" stop-opacity=".26"/>
+            <stop offset="100%" stop-color="#050505" stop-opacity="0"/>
+          </radialGradient></defs>
+          <rect width="1400" height="400" fill="url(#dg)"/>
+          <g stroke="#f0500a" stroke-opacity=".4" stroke-width="1.6" fill="none">
+            <path d="M-10 320 H280 L350 250 H640 L710 320 H1010"/>
+            <path d="M1050 80 L1120 150 H1320"/>
+          </g>
+          <g fill="#f0500a"><circle cx="280" cy="320" r="4"/><circle cx="640" cy="250" r="4"/><circle cx="1120" cy="150" r="4"/></g>
+        </svg>
+      </div>
+      <div class="wrap hero-inner">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Live, in your browser</p>
+        <h1>Capability you can operate.</h1>
+        <p class="lede">These demonstrations run entirely client-side: no backend, no network calls,
+        nothing leaves this page. The mechanics are real implementations of the pipeline thinking we
+        apply to client systems; only the data is synthetic. <span class="illustrative" style="vertical-align:middle">All demo data is illustrative</span></p>
+        <nav class="demo-index" aria-label="Jump to a demonstration">
+          <a href="#demo-1">01 · Pipeline</a>
+          <a href="#demo-2">02 · Statement → intelligence</a>
+          <a href="#demo-3">03 · Reconciliation</a>
+          <a href="#demo-4">04 · AI triage</a>
+          <a href="#demo-5">05 · Data quality</a>
+          <a href="#demo-6">06 · Pack checker</a>
+          <a class="di-cta" href="contact.html">Discuss yours →</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ============ DEMO 1 ============ -->
+    <section class="section" id="demo-1" aria-labelledby="demo-1-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">Demonstration 01</p>
+          <h2 id="demo-1-h">Manual workflow → automated compliance-support pipeline</h2>
+          <p>A FICA-style document pack arrives in twelve formats from twelve people. Manually, that
+          is a checklist someone grinds through. Here, watch the same intake run as a governed
+          pipeline: extraction, verification, routing and an audit trail, all running here.</p>
+        </div>
+        <div class="split" id="demo-pipeline">
+          <div class="reveal">
+            <div class="panel">
+              <div class="panel-bar"><span class="l on"></span><span class="l"></span><span class="t">compliance-intake-pipeline<span class="pbs"> (synthetic run)</span></span></div>
+              <div class="panel-body">
+                <div class="pipeline" role="list" aria-label="Pipeline stages">
+                  <div class="stage" data-state="idle" role="listitem"><b>Intake</b><small>files land, checksummed</small><span class="st" aria-hidden="true"></span></div>
+                  <div class="stage" data-state="idle" role="listitem"><b>Extract</b><small>OCR + layout parsing</small><span class="st" aria-hidden="true"></span></div>
+                  <div class="stage" data-state="idle" role="listitem"><b>Verify</b><small>completeness rules</small><span class="st" aria-hidden="true"></span></div>
+                  <div class="stage" data-state="idle" role="listitem"><b>Route</b><small>clear vs reviewer queue</small><span class="st" aria-hidden="true"></span></div>
+                  <div class="stage" data-state="idle" role="listitem"><b>Audit trail</b><small>sealed, timestamped</small><span class="st" aria-hidden="true"></span></div>
+                </div>
+                <div class="terminal mt-1" aria-live="polite" aria-label="Pipeline execution log"></div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <h3 style="font-size:1.1rem">What you are actually seeing</h3>
+            <ul style="margin-top:1rem" class="tc">
+              <li style="padding:.55rem 0;border-bottom:1px dashed var(--line)">The stages transition
+              <strong style="color:var(--ink)">live</strong>: idle → running (pulsing node) → done
+              (green), driven by the same state-machine pattern used in production pipelines.</li>
+              <li style="padding:.55rem 0;border-bottom:1px dashed var(--line)">Exceptions are
+              <strong style="color:var(--ink)">routed, never swallowed</strong>: missing issue dates and
+              expired IDs become a reviewer queue with evidence links, exactly the behaviour a
+              compliance-support workflow needs.</li>
+              <li style="padding:.55rem 0">The audit trail is the product: every action timestamped
+              and reversible, so automated work stays defensible.</li>
+            </ul>
+            <div class="controls mt-2">
+              <button class="chip" type="button" data-action="run">Run demonstration</button>
+              <button class="chip" type="button" data-action="reset">Reset</button>
+            </div>
+            <p class="tc">Runs client-side. Nothing is uploaded anywhere.</p>
+            <div class="effort-ledger" aria-label="Manual versus automated effort comparison">
+              <div class="effort-col manual" id="ep-manual">
+                <h4><span>manual monday</span><span class="et" id="ep-manual-clock">3h 45m</span></h4>
+                <div class="effort-steps">
+                  <div class="es" data-state="idle"><span class="et">~45m</span><span class="ed">collect 12 files from 4 inboxes</span></div>
+                  <div class="es" data-state="idle"><span class="et">~50m</span><span class="ed">re-key details into tracker</span></div>
+                  <div class="es" data-state="idle"><span class="et">~40m</span><span class="ed">check completeness by hand</span></div>
+                  <div class="es" data-state="idle"><span class="et">~35m</span><span class="ed">chase 3 missing documents by email</span></div>
+                  <div class="es" data-state="idle"><span class="et">~45m</span><span class="ed">file, evidence-pack and sign off</span></div>
+                </div>
+                <div class="effort-total">human cost: <b>3h 45m</b> of someone's Monday</div>
+              </div>
+              <div class="effort-col" id="ep-auto">
+                <h4><span>governed pipeline</span><span class="et" id="ep-auto-clock">—</span></h4>
+                <div class="effort-steps">
+                  <div class="es" data-state="idle"><span class="et">00:04</span><span class="ed">intake + checksums (unattended)</span></div>
+                  <div class="es" data-state="idle"><span class="et">00:31</span><span class="ed">extract 148 fields, flag 4 low-confidence</span></div>
+                  <div class="es" data-state="idle"><span class="et">01:12</span><span class="ed">verify rules → 11 missing dates, 2 expired</span></div>
+                  <div class="es" data-state="idle"><span class="et">01:20</span><span class="ed">route: 9 auto-clear, 3 reviewer queue</span></div>
+                  <div class="es" data-state="idle"><span class="et">03:45</span><span class="ed">audit trail sealed</span></div>
+                </div>
+                <div class="effort-total">machine cost: <b>3m 45s</b>, no hand-carry</div>
+              </div>
+            </div>
+            <div class="effort-note" id="ep-note" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="demo-2" aria-labelledby="demo-2-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">Demonstration 02</p>
+          <h2 id="demo-2-h">Raw statement → structured transaction intelligence</h2>
+          <p>Below is a raw bank-statement-style text block (synthetic). Parse it: the document is
+          classified line-by-line into transactions, categories and exceptions, the core of
+          financial-document automation. Then break it on purpose: edit the text or feed it nonsense
+          and watch the controlled, guided failure instead of a crashed page.</p>
+        </div>
+        <div id="demo-statement">
+          <div class="split">
+            <div class="reveal">
+              <div class="panel">
+                <div class="panel-bar"><span class="l on"></span><span class="l"></span><span class="t">raw-document.txt<span class="pbs"> (editable, synthetic)</span></span></div>
+                <div class="panel-body">
+                  <label for="statement-input">Statement text (illustrative, nothing is sent anywhere)</label>
+                  <textarea id="statement-input" rows="12" spellcheck="false" style="font-family:var(--font-mono);font-size:.78rem;line-height:1.6" aria-describedby="statement-help"></textarea>
+                  <p id="statement-help" class="tc" style="margin-top:.5rem">Tip: delete everything and press Parse to see guided handling of empty input.</p>
+                  <div class="controls mt-1">
+                    <button class="chip" type="button" data-action="sample">Load sample</button>
+                    <button class="chip" type="button" data-action="parse">Parse → intelligence</button>
+                    <button class="chip" type="button" data-action="clear-doc">Clear</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reveal">
+              <div class="panel">
+                <div class="panel-bar"><span class="l on"></span><span class="l"></span><span class="t">structured-output.json-style view</span></div>
+                <div class="panel-body">
+                  <div class="doc" id="statement-output" aria-live="polite" aria-label="Structured output">
+                    <h4>awaiting input</h4>
+                    <p class="tc">Press “Load sample”, then “Parse → intelligence”.</p>
+                  </div>
+                  <div class="metric-row" id="statement-metrics" aria-label="Parsed metrics"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="demo-3" aria-labelledby="demo-3-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">Demonstration 03</p>
+          <h2 id="demo-3-h">Two-way document reconciliation board</h2>
+          <p>Financial automation is mostly about trust between two record sets. Here a synthetic bank
+          statement and a matching ledger are reconciled line-by-line: matches confirm automatically,
+          mismatches become reviewable exceptions with a controlled resolution path, and the audit
+          trail records every decision. Nothing is swallowed; nothing is silently “fixed”.</p>
+        </div>
+        <div class="split top" id="demo-recon">
+          <div class="reveal">
+            <div class="panel">
+              <div class="panel-bar"><span class="l on"></span><span class="l"></span><span class="t">reconciliation-board<span class="pbs"> (synthetic records)</span></span></div>
+              <div class="panel-body">
+                <div class="rec-board">
+                  <div class="rec-col">
+                    <h4><span class="n" id="rec-n-st">0/8</span> · statement</h4>
+                    <div class="rec-table" id="rec-statement" aria-label="Statement lines"></div>
+                  </div>
+                  <div class="rec-col">
+                    <h4><span class="n" id="rec-n-lg">0/8</span> · ledger</h4>
+                    <div class="rec-table" id="rec-ledger" aria-label="Ledger entries"></div>
+                  </div>
+                </div>
+                <div class="rec-status" id="rec-status" aria-live="polite"></div>
+                <div class="rec-queue" id="rec-queue" aria-live="polite"></div>
+                <div class="controls mt-1">
+                  <button class="chip" type="button" data-action="rec-run">Run reconciliation</button>
+                  <button class="chip" type="button" data-action="rec-reset">Reset</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <h3 style="font-size:1.1rem">What you are actually seeing</h3>
+            <ul style="margin-top:1rem" class="tc">
+              <li style="padding:.55rem 0;border-bottom:1px dashed var(--line)">A two-way match:
+              every statement line must find a ledger partner and vice versa, so one-sided matches
+              become exceptions, not assumptions.</li>
+              <li style="padding:.55rem 0;border-bottom:1px dashed var(--line)">Exceptions keep their
+              evidence: both sides, the variance and the reason code stay attached until a human
+              disposes of them.</li>
+              <li style="padding:.55rem 0">The run ends with a sealed audit summary, the output a
+              finance team actually signs off.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEMO 6 ============ -->
+    <section class="section section-tint" id="demo-4" aria-labelledby="demo-4-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">Demonstration 04</p>
+          <h2 id="demo-4-h">AI triage desk — classification with a human in the loop</h2>
+          <p>A synthetic operations inbox: records arrive continuously and an AI classification
+          pass triages each one, normal, watch or act-now, with a reason attached. You are the
+          reviewer: move the confidence threshold, override any classification, and watch the
+          audit trail record both the machine's call and yours. AI proposes; governance disposes.</p>
+        </div>
+        <div class="panel reveal">
+          <div class="panel-bar"><span class="l on"></span><span class="l"></span><span class="t">ai-triage-desk<span class="pbs"> (synthetic events)</span></span></div>
+          <div class="panel-body" id="demo-triage">
+            <div class="controls" role="group" aria-label="AI triage threshold">
+              <button class="chip" type="button" data-tg-conf="0.60" aria-pressed="false">Confidence ≥ 0.60</button>
+              <button class="chip" type="button" data-tg-conf="0.75" aria-pressed="true">Confidence ≥ 0.75</button>
+              <button class="chip" type="button" data-tg-conf="0.90" aria-pressed="false">Confidence ≥ 0.90</button>
+              <button class="chip" type="button" data-tg-action="run" id="tg-run">Run AI triage</button>
+              <button class="chip" type="button" data-tg-action="reset">Reset</button>
+            </div>
+            <div class="tg-wrap">
+              <div class="tg-feed" id="tg-feed" aria-live="polite" aria-label="Fictional events awaiting triage"></div>
+              <div class="tg-side">
+                <div class="tg-stats metric-row" id="tg-stats" aria-label="Triage counters"></div>
+                <div class="insight" id="tg-note" aria-live="polite"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="illustrative" style="margin-top:.8rem">Illustrative demonstration — no live AI in the page; thresholds and routing patterns are what real deployments get.</p>
+      </div>
+    </section>
+
+    <!-- ============ DEMO 7 ============ -->
+    <section class="section" id="demo-5" aria-labelledby="demo-5-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">Demonstration 05</p>
+          <h2 id="demo-5-h">Data-quality profiler — trust a dataset before you use it</h2>
+          <p>Analytics is only as good as the data underneath. Pick a synthetic operational dataset
+          and the profiler reads every column: completeness, type stability, outliers
+          and drift signals, each with a recommended action. Click a column to open its profile.
+          This is the gate we put before dashboards, models and forecasts.</p>
+        </div>
+        <div class="panel reveal">
+          <div class="panel-bar"><span class="l on"></span><span class="l"></span><span class="t">data-quality-profiler<span class="pbs"> (synthetic datasets)</span></span></div>
+          <div class="panel-body" id="demo-dq">
+            <div class="controls" role="group" aria-label="Choose dataset">
+              <button class="chip" type="button" data-dq-ds="fuel" aria-pressed="true">Fleet fuel logs</button>
+              <button class="chip" type="button" data-dq-ds="intake" aria-pressed="false">Client intake records</button>
+              <button class="chip" type="button" data-dq-ds="telemetry" aria-pressed="false">Sensor telemetry</button>
+            </div>
+            <div class="dq-wrap">
+              <div class="dq-cols" id="dq-cols" aria-label="Column quality cards"></div>
+              <div class="dq-detail" id="dq-detail" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEMO 8 ============ -->
+    <section class="section section-tint" id="demo-6" aria-labelledby="demo-6-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">Demonstration 06</p>
+          <h2 id="demo-6-h">Document-pack completeness checker — a governed intake gate</h2>
+          <p>A FICA-style onboarding pack arrives in pieces. Tick the documents that have
+          actually landed and the checker validates the pack against its completeness rules:
+          what is present, what is missing, what has expired, and the exact reviewer request list
+          that unblocks the file. Workflow and compliance-support technology: assistance, not
+          legal advice.</p>
+        </div>
+        <div class="split top" id="demo-pack">
+          <div class="reveal">
+            <div class="panel">
+              <div class="panel-bar"><span class="l on"></span><span class="l"></span><span class="t">pack-checker<span class="pbs"> (synthetic documents)</span></span></div>
+              <div class="panel-body">
+                <div class="pk-list" id="pk-list" role="group" aria-label="Fictional documents in the pack"></div>
+                <div class="controls mt-1">
+                  <button class="chip" type="button" data-action="pk-check">Validate pack</button>
+                  <button class="chip" type="button" data-action="pk-reset">Reset</button>
+                </div>
+              </div>
+            </div>
+            <p class="illustrative" style="margin-top:.8rem">Illustrative demonstration — compliance-support workflow only, not legal advice and no compliance guarantee.</p>
+          </div>
+          <div class="reveal">
+            <div class="panel">
+              <div class="panel-bar"><span class="l on"></span><span class="l"></span><span class="t">pack-verdict<span class="pbs"> (validation output)</span></span></div>
+              <div class="panel-body">
+                <div class="terminal pk-out" id="pk-out" aria-live="polite" aria-label="Pack validation output"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">Why demos instead of adjectives</p>
+          <h2>The same discipline, pointed at your operation.</h2>
+          <p>These demonstrations are miniature versions of delivery patterns: a governed
+          compliance-support pipeline, a document-to-intelligence transformation, an analytics
+          decision layer, a reconciliation board, a system blueprint, an AI triage desk, a
+          data-quality gate and a completeness checker. In a client
+          engagement they scale up to real formats, real validation rules and real systems of
+          record, with controls and auditability around them.</p>
+        </div>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="contact.html">Discuss your workflow <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="credibility.html">Why the capability is credible</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Bowyer Intelligence home" style="margin-bottom:1rem">
+            <img src="assets/img/logo-mark.png" alt="" width="44" height="37" aria-hidden="true">
+            <span>Bowyer&nbsp;Intelligence</span>
+          </a>
+          <p class="tc" style="max-width:34ch">Creating the Operational Edge. Intelligent automation, applied AI,
+          data intelligence and bespoke software for operations that deserve better.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <a href="index.html">Home</a>
+          <a href="capabilities.html">Capabilities</a>
+          <a href="demonstrations.html">Demonstrations</a>
+          <a href="credibility.html">Credibility</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="mailto:hello@bowyer-intelligence.example">hello@bowyer-intelligence.example</a>
+          <a href="tel:+27100000000">+27 10 000 0000</a>
+          <p class="tc" style="margin-top:.6rem">Placeholder details — real channels not yet authorised.</p>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© <span id="yr">2026</span> Bowyer Intelligence. All rights reserved.</span>
+        <span class="mono">static site · no tracking · no cookies</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
